@@ -3,7 +3,7 @@ module.exports = (data) => {
   const TOKEN = data.token;
   const chatId = data.chat_id; // або звідки ти береш chat_id
 
-  const binary = atob(base64Qr);
+  const binary = atob(data.base64Qr || base64Qr);
   const bytes = new Uint8Array(binary.length);
   for (let i = 0; i < binary.length; i++) {
     bytes[i] = binary.charCodeAt(i);
