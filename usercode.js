@@ -21,4 +21,5 @@ module.exports = (data) => {
         body: form
     };
 
+    return data;
 };
